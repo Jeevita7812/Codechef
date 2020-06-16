@@ -1,2 +1,2 @@
-y = input()
+y = list(input())
 print(y)
