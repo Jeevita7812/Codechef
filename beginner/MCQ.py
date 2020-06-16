@@ -1,16 +1,19 @@
-for i in range(int(input())):
+for i in range(0,int(input())):
     n = int(input())
-    guess = list(input().split())
-    ans = list(input().split())
+    m = input()
+    o = input()
     marks = 0
-    h = 0
-    while h < n:
-        if guess[h] == "N":
-            marks = marks
-        if guess[h] == ans[h]:
-            marks += 1
-            h += 1
-        else:
-            if guess[h] != ans[h] and guess[h] == "N":
-                h += 2
+    i = 0
+    while(i < n):
+        if(m[i] == o[i]):
+            marks += 1 
+        elif(o[i] == 'N'):
+            marks += 0 
+        elif(m[i] != o[i] and o[i]!='N'):
+            if(i == n - 1):
+                i += 0
+            else:
+                i += 1
+                marks += 0
+        i += 1
     print(marks)
